@@ -468,6 +468,103 @@ body {
   margin: 4px 8px 0 0;
 }
 
+/* === 六体演化 === */
+.char-card--evolved {
+  border: 1px solid var(--border);
+  grid-column: 1 / -1;
+}
+
+.char-six {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gold);
+  display: block;
+  margin-top: 2px;
+}
+
+.char-section--evolved {
+  background: #faf8f4;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 12px 0 0 0;
+}
+
+.char-evo {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  padding: 8px 0 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.char-evo-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 78px;
+  flex-shrink: 0;
+}
+
+.char-evo-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.char-evo-glyph {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.char-evo-glyph--cursive {
+  font-family: "STKaiti", "KaiTi", "楷体", var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+}
+
+.char-evo-desc {
+  font-size: 11px;
+  color: var(--text-light);
+  line-height: 1.5;
+  max-width: 90px;
+}
+
+.char-evo-arrow {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+  margin-top: 4px;
+}
+
+.char-evo-arrow svg {
+  opacity: 0.5;
+}
+
+/* iPhone Safari 滚动优化 */
+.char-evo::-webkit-scrollbar {
+  height: 3px;
+}
+.char-evo::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
 /* === 注解侧栏（来历篇专用） === */
 .anno-layout {
   display: grid;
