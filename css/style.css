@@ -21,7 +21,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: var(--sans);
+  font-family: var(--serif);
   background: var(--bg);
   color: var(--text);
   line-height: 1.9;
@@ -509,7 +509,7 @@ body {
 }
 
 .evo-glyph {
-  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", "宋体", "KaiTi", "STKaiti", "楷体", serif;
+  font-family: var(--kai);
   font-size: 42px;
   font-weight: 600;
   color: #1a1a1a;
