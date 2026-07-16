@@ -520,6 +520,31 @@ body {
   line-height: 1;
 }
 
+.evo-row-glyph-link {
+  display: flex;
+  align-items: center;
+  min-width: 44px;
+  flex-shrink: 0;
+}
+
+.evo-row-glyph-image {
+  display: block;
+  width: 44px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.evo-source-note {
+  margin: -10px 0 16px;
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.evo-source-note a {
+  color: var(--accent);
+}
+
 .evo-row-desc {
   font-size: 12.5px;
   color: var(--text-light);
@@ -539,6 +564,8 @@ body {
   .evo-row { gap: 8px; padding: 8px 10px; }
   .evo-row-label { min-width: 48px; font-size: 11px; }
   .evo-row-glyph { font-size: 24px; min-width: 32px; }
+  .evo-row-glyph-link { min-width: 32px; }
+  .evo-row-glyph-image { width: 32px; height: 42px; }
   .evo-row-desc { font-size: 11px; }
 }
 
