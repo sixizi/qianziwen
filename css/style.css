@@ -492,10 +492,15 @@ body {
   padding: 14px 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #faf8f4;
   gap: 8px;
   transition: all 0.2s;
 }
+.evo-step:nth-child(1) { background: linear-gradient(180deg, #f5ece0, #faf6f0); }
+.evo-step:nth-child(2) { background: linear-gradient(180deg, #e8dcc8, #f5ede0); }
+.evo-step:nth-child(3) { background: linear-gradient(180deg, #f2ece0, #faf8f4); }
+.evo-step:nth-child(4) { background: linear-gradient(180deg, #f9f6f0, #fdfcf8); border-width: 1.5px; }
+.evo-step:nth-child(5) { background: #fff; border-width: 2px; border-color: #222; }
+.evo-step:nth-child(6) { background: linear-gradient(135deg, #fdfcf8, #f7f4ec); }
 .evo-step:hover {
   border-color: var(--accent-light);
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -509,7 +514,7 @@ body {
 }
 
 .evo-glyph {
-  font-family: var(--kai);
+  font-family: var(--serif);
   font-size: 42px;
   font-weight: 600;
   color: #1a1a1a;
@@ -519,6 +524,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.evo-step:nth-child(1) .evo-glyph { font-weight: 400; letter-spacing: -1px; color: #5c3d1a; }
+.evo-step:nth-child(2) .evo-glyph { font-weight: 500; color: #4a3728; }
+.evo-step:nth-child(3) .evo-glyph { font-weight: 400; color: #2c1810; }
+.evo-step:nth-child(4) .evo-glyph { font-weight: 700; letter-spacing: -0.5px; transform: scaleX(1.05); }
+.evo-step:nth-child(5) .evo-glyph { font-weight: 900; font-size: 44px; }
+.evo-step:nth-child(6) .evo-glyph { font-weight: 400; font-style: italic; transform: rotate(-2deg) scale(1.05); letter-spacing: -1px; }
 
 .evo-glyph--missing {
   font-size: 28px;
