@@ -468,7 +468,7 @@ body {
   margin: 4px 8px 0 0;
 }
 
-/* === 六体演化时间轴 === */
+/* === 六体演化列表 === */
 .char-six {
   font-family: var(--sans);
   font-size: 11px;
@@ -478,84 +478,68 @@ body {
   margin-top: 2px;
 }
 
-.evo-timeline {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 12px;
-}
-
-.evo-step {
+.evo-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 14px 12px;
+  gap: 0;
   border: 1px solid var(--border);
   border-radius: 8px;
-  gap: 8px;
-  transition: all 0.2s;
-}
-.evo-step:nth-child(1) { background: linear-gradient(180deg, #f5ece0, #faf6f0); }
-.evo-step:nth-child(2) { background: linear-gradient(180deg, #e8dcc8, #f5ede0); }
-.evo-step:nth-child(3) { background: linear-gradient(180deg, #f2ece0, #faf8f4); }
-.evo-step:nth-child(4) { background: linear-gradient(180deg, #f9f6f0, #fdfcf8); border-width: 1.5px; }
-.evo-step:nth-child(5) { background: #fff; border-width: 2px; border-color: #222; }
-.evo-step:nth-child(6) { background: linear-gradient(135deg, #fdfcf8, #f7f4ec); }
-.evo-step:hover {
-  border-color: var(--accent-light);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
 }
 
-.evo-name {
+.evo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  min-height: 48px;
+}
+.evo-row:last-child {
+  border-bottom: none;
+}
+
+.evo-row-label {
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 600;
   color: var(--accent);
+  min-width: 60px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.evo-glyph {
+.evo-row-glyph {
   font-family: var(--serif);
-  font-size: 42px;
-  font-weight: 600;
-  color: #1a1a1a;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  min-width: 44px;
+  text-align: center;
+  flex-shrink: 0;
   line-height: 1;
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.evo-step:nth-child(1) .evo-glyph { font-weight: 400; letter-spacing: -1px; color: #5c3d1a; }
-.evo-step:nth-child(2) .evo-glyph { font-weight: 500; color: #4a3728; }
-.evo-step:nth-child(3) .evo-glyph { font-weight: 400; color: #2c1810; }
-.evo-step:nth-child(4) .evo-glyph { font-weight: 700; letter-spacing: -0.5px; transform: scaleX(1.05); }
-.evo-step:nth-child(5) .evo-glyph { font-weight: 900; font-size: 44px; }
-.evo-step:nth-child(6) .evo-glyph { font-weight: 400; font-style: italic; transform: rotate(-2deg) scale(1.05); letter-spacing: -1px; }
 
-.evo-glyph--missing {
-  font-size: 28px;
+.evo-row-desc {
+  font-size: 12.5px;
   color: var(--text-light);
-  font-style: italic;
-  font-weight: 300;
+  line-height: 1.65;
+  flex: 1;
 }
 
-.evo-desc {
-  font-size: 12px;
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-.evo-extra {
+.evo-row-desc em {
   display: block;
   font-size: 11px;
   color: var(--gold);
+  font-style: normal;
   margin-top: 2px;
 }
 
-@media (max-width: 600px) {
-  .evo-timeline {
-    grid-template-columns: 1fr 1fr;
-  }
-  .evo-glyph { font-size: 34px; }
+@media (max-width: 480px) {
+  .evo-row { gap: 8px; padding: 8px 10px; }
+  .evo-row-label { min-width: 48px; font-size: 11px; }
+  .evo-row-glyph { font-size: 24px; min-width: 32px; }
+  .evo-row-desc { font-size: 11px; }
 }
 
 /* === 注解侧栏（来历篇专用） === */
