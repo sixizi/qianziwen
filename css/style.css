@@ -520,6 +520,39 @@ body {
   line-height: 1;
 }
 
+@font-face {
+  font-family: "MoeLi";
+  src: url("../assets/fonts/MoeLI-3.0.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LXGWWenKai";
+  src: url("../assets/fonts/LXGWWenKai-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZhiMangXing";
+  src: url("../assets/fonts/ZhiMangXing-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LiuJianMaoCao";
+  src: url("../assets/fonts/LiuJianMaoCao-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+.evo-row-glyph-font {
+  font-size: 40px;
+}
+
+.evo-row-glyph-font--lishu { font-family: "MoeLi", "Libian SC", serif; }
+.evo-row-glyph-font--kaishu { font-family: "LXGWWenKai", "Kaiti SC", serif; }
+.evo-row-glyph-font--xingshu { font-family: "ZhiMangXing", "Xingkai SC", serif; }
+.evo-row-glyph-font--caoshu { font-family: "LiuJianMaoCao", cursive; }
+
 .evo-row-glyph-link {
   display: flex;
   align-items: center;
@@ -564,6 +597,7 @@ body {
   .evo-row { gap: 8px; padding: 8px 10px; }
   .evo-row-label { min-width: 48px; font-size: 11px; }
   .evo-row-glyph { font-size: 24px; min-width: 32px; }
+  .evo-row-glyph-font { font-size: 32px; }
   .evo-row-glyph-link { min-width: 32px; }
   .evo-row-glyph-image { width: 32px; height: 42px; }
   .evo-row-desc { font-size: 11px; }
