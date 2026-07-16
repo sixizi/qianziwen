@@ -504,7 +504,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-width: 78px;
+  min-width: 82px;
   flex-shrink: 0;
 }
 
@@ -513,28 +513,97 @@ body {
   font-size: 11px;
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   white-space: nowrap;
 }
 
 .char-evo-glyph {
-  font-family: var(--serif);
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 6px;
-  min-height: 48px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
 }
 
-.char-evo-glyph--cursive {
-  font-family: "STKaiti", "KaiTi", "楷体", var(--serif);
-  font-style: italic;
+/* 甲骨文风格：粗犷、象形、如刀刻 */
+.char-evo-glyph--oracle {
+  font-size: 36px;
+  color: #5c3d1a;
   font-weight: 400;
+  text-shadow: 0 0 2px rgba(92,61,26,0.3);
+  letter-spacing: -1px;
+  background: linear-gradient(180deg, #f5ece0 0%, #ede0cc 100%);
+  border: 1px solid #d4c5a9;
+}
+
+/* 金文风格：圆润、厚重、铸铜感 */
+.char-evo-glyph--bronze {
+  font-size: 36px;
+  color: #4a3728;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(74,55,40,0.2);
+  background: linear-gradient(180deg, #e8dcc8 0%, #ddd0b6 100%);
+  border: 1px solid #b8a88c;
+}
+
+/* 小篆风格：圆转、匀称、流畅 */
+.char-evo-glyph--seal {
+  font-size: 36px;
+  font-weight: 400;
+  color: #2c1810;
+  text-shadow: 0 1px 1px rgba(44,24,16,0.15);
+  background: linear-gradient(180deg, #faf6ef 0%, #f2ece0 100%);
+  border: 1px solid #d4c8b0;
+  letter-spacing: 0;
+}
+
+/* 隶书风格：扁平、波磔、蚕头燕尾 */
+.char-evo-glyph--clerk {
   font-size: 38px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: linear-gradient(180deg, #f9f6f0 0%, #f0ebe2 100%);
+  border: 1px solid #ccc0aa;
+  letter-spacing: 0;
+  transform: scaleX(1.05);
+}
+
+/* 楷书风格：端正、法度、印刷体 */
+.char-evo-glyph--regular {
+  font-size: 38px;
+  font-weight: 700;
+  color: #111;
+  background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+  border: 1px solid #ddd;
+}
+
+/* 行草风格：连绵、飞动、一气呵成 */
+.char-evo-glyph--cursive {
+  font-family: "STKaiti", "KaiTi", "楷体", "STSong", serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #1a1a1a;
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #fdfcf8 0%, #f7f4ec 100%);
+  border: 1px solid #e0d8c8;
+  letter-spacing: -1px;
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.char-evo-glyph--none {
+  font-size: 20px;
+  color: var(--text-light);
+  font-weight: 300;
+  background: transparent;
+  border: 1px dashed var(--border);
+  font-style: italic;
 }
 
 .char-evo-desc {
@@ -548,12 +617,37 @@ body {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 0 4px;
-  margin-top: 4px;
+  padding: 0 6px;
+  margin-top: 10px;
 }
 
 .char-evo-arrow svg {
-  opacity: 0.5;
+  opacity: 0.35;
+}
+
+/* 六体图例 */
+.char-evo-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted var(--border);
+}
+
+.char-evo-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-light);
+}
+
+.char-evo-legend-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* iPhone Safari 滚动优化 */
