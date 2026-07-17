@@ -157,7 +157,7 @@ document.querySelectorAll('.anno-ref').forEach(function(ref) {
 
 **古文字阶段不展示字形**：甲骨文、金文、小篆没有标准 Unicode 字符，任何用宋体/黑体/楷体替代的方案都是错误和不诚实的。这三个阶段只用文字描述。
 
-**隶变之后才展示字形**：隶书、楷书、行草可以用现代宋体字正确表示，正常展示即可。
+**隶变之后才展示字形**：隶书、楷书、行书、草书分别展示字形；必须使用本站自托管、许可允许公开再发布的对应书体字体，不能用现代宋体、系统楷体或其他不相符字体冒充书体。
 
 ### HTML 模板（每个字一个 char-card）
 
@@ -207,11 +207,18 @@ document.querySelectorAll('.anno-ref').forEach(function(ref) {
           <span class="evo-row-desc">横平竖直，结构端正<br><em>▸ 沿用至今，千年不变</em></span>
         </div>
 
-        <!-- 行草：展示字形 -->
+        <!-- 行书：展示字形 -->
         <div class="evo-row">
-          <span class="evo-row-label">⚒ 行草</span>
+          <span class="evo-row-label">⚒ 行书</span>
           <span class="evo-row-glyph">天</span>
           <span class="evo-row-desc">兰亭序首字，俯仰生姿<br><em>▸ 天下第一行书</em></span>
+        </div>
+
+        <!-- 草书：展示字形 -->
+        <div class="evo-row">
+          <span class="evo-row-label">⚒ 草书</span>
+          <span class="evo-row-glyph">天</span>
+          <span class="evo-row-desc">连绵省笔，笔势飞动<br><em>▸ 以章草、今草为主要演变脉络</em></span>
         </div>
 
       </div>
@@ -293,7 +300,17 @@ document.querySelectorAll('.anno-ref').forEach(function(ref) {
 | 甲骨文 | `#f5ece0` | 龟甲兽骨的暖褐 |
 | 金文 | `#e8dcc8` | 青铜器锈蚀后的古铜 |
 | 小篆 | `#f2ece0` | 竹简绢帛的淡米 |
-| 隶书/楷书/行草 | 无背景（继承白色卡片） | 纸上书写 |
+| 隶书/楷书/行书/草书 | 无背景（继承白色卡片） | 纸上书写 |
+
+## 逐字精讲书体资源（持久约定）
+
+此约定适用于以后新建或补全的每一讲“逐字精讲”六体演化板块。
+
+1. 甲骨文、金文、小篆仅在有可靠字典或考古来源可核实时展示字形；没有可靠字形时保留文字描述，不能用现代字体替代。
+2. 隶书、楷书、行书、草书必须分别使用本站自托管、许可允许公开再发布的对应书体字体或字形；不得热链第三方书法图片，尤其不得依赖证书异常、来源不明或没有再发布授权的资源。
+3. 字体文件放在 `assets/fonts/`，完整许可证放在 `assets/fonts/licenses/`；每个页面在来源说明中链接 `assets/fonts/README.md`，新增或更换字体时同步更新该说明和署名。
+4. 当前统一映射：隶书使用 MoeLI（CC BY-ND 3.0 TW），楷书使用 LXGW WenKai（SIL OFL 1.1），行书使用 Zhi Mang Xing（SIL OFL 1.1），草书使用 Liu Jian Mao Cao（SIL OFL 1.1）。缺少简体字时，可使用该授权字体已有的对应传统字形（例如“黄”改为“黃”）；不能回退为不相符的现代字体。
+5. 每次完成一个章节的修改后，检查页面结构、字体资源和外链，再创建独立且描述清楚的 Git 提交；如需更新 GitHub Pages，推送 `main` 并确认 Pages 构建完成。
 
 ## 侧栏注解内容要求
 
