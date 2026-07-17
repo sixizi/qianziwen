@@ -473,6 +473,11 @@ body {
     min-width: 0;
     text-align: center;
   }
+
+  .hero-pinyin--paired > span {
+    display: block;
+    white-space: nowrap;
+  }
 }
 
 /* === 滚动美化 === */
@@ -571,10 +576,10 @@ body {
   font-size: 40px;
 }
 
-.evo-row-glyph-font--lishu { font-family: "MoeLi", "Libian SC", serif; }
-.evo-row-glyph-font--kaishu { font-family: "LXGWWenKai", "Kaiti SC", serif; }
-.evo-row-glyph-font--xingshu { font-family: "ZhiMangXing", "Xingkai SC", serif; }
-.evo-row-glyph-font--caoshu { font-family: "LiuJianMaoCao", cursive; }
+.evo-row-glyph-font--lishu { font-family: "MoeLi"; }
+.evo-row-glyph-font--kaishu { font-family: "LXGWWenKai"; }
+.evo-row-glyph-font--xingshu { font-family: "ZhiMangXing"; }
+.evo-row-glyph-font--caoshu { font-family: "LiuJianMaoCao"; }
 
 .evo-row-glyph-link {
   display: flex;
