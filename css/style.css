@@ -452,6 +452,29 @@ body {
   .lecture-grid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 480px) {
+  .navbar {
+    gap: 4px;
+    padding: 8px 10px;
+  }
+
+  .navbar a,
+  .navbar button {
+    flex: 0 0 auto;
+    font-size: 12px;
+    line-height: 1.25;
+    padding: 4px 6px;
+    white-space: nowrap;
+  }
+
+  .navbar .nav-center {
+    font-size: 11px;
+    line-height: 1.25;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
 /* === 滚动美化 === */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
