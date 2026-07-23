@@ -4,7 +4,7 @@
 
 楷书、行书、草书的 WOFF2 文件是从下列授权 TTF 原始字体生成的站内字集；新增讲次前必须把新字加入字集并检查 CMap 覆盖，不能让浏览器回退到系统字体。
 
-当前 WOFF2 子集覆盖第 1–45 讲逐字精讲的 360 个展示字及各书体所用规范字形；每次扩展讲次时须同步重建并核验此覆盖范围。
+当前 WOFF2 子集覆盖第 1–125 讲逐字精讲的 995 个展示字及各书体所用规范字形；每次扩展讲次时须同步重建并核验此覆盖范围。
 
 - `MoeLI-3.0.ttf`：教育部隶书 v3.00，著作权人“中華民國教育部”，以 [CC BY-ND 3.0 TW](https://creativecommons.org/licenses/by-nd/3.0/tw/deed.zh-hant) 发布；完整说明见 `licenses/MoeLI-license.pdf`。
 - `LXGWWenKai-Regular.woff2`：霞鹜文楷，SIL Open Font License 1.1；完整许可证见 `licenses/LXGWWenKai-OFL.txt`。
